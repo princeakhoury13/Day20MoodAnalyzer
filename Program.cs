@@ -6,24 +6,14 @@ namespace Day20MoodAnalyzer
     {
         public static void Main(string[] args)
         {
-            string message = "I am happy";
-
-            AnalyzeMood(message);
-            
-        }
-
-        public static void AnalyzeMood(string message)
-        {
-            string happy = "I am happy";
-            string sad = "I am sad";
-
-            if(message == happy)
+            try
             {
-                Console.WriteLine("Mood: Happy");
+                AnalyzeMood mood = new AnalyzeMood("");
+                mood.Analyze();
             }
-            else if(message == sad)
+            catch (ArgumentException ex)
             {
-                Console.WriteLine("Mood: Sad");
+                Console.WriteLine(ex.Message);
             }
         }
     }
