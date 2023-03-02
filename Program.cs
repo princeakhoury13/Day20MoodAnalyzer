@@ -11,7 +11,7 @@ namespace Day20MoodAnalyzer
                 AnalyzeMood mood = new AnalyzeMood("");
                 mood.Analyze();
             }
-            catch (ArgumentException ex)
+            catch (MoodAnalysisException ex)
             {
                 Console.WriteLine(ex.Message);
             }
